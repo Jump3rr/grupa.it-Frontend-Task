@@ -1,0 +1,13 @@
+body {
+    text-align: center;
+}
+.formRow {
+    width: 20vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+#mainForm {
+    margin-top: 10vh;
+    display: inline-block;
+}
