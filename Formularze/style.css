@@ -25,3 +25,19 @@ body {
 .form-row.error small {
     display: block;
 }
+#library {
+    margin-top: 5vh;
+}
+.book {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 70vw;
+    margin: auto;
+}
+.longFields {
+    width: 30%;
+}
+.shortFields {
+    width: 10%;
+}

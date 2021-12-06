@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,6 +8,7 @@
     <title>Formularze</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <form id="mainForm">
         <div class="form-row">
@@ -28,18 +30,21 @@
             <label>Kategoria</label>
             <select id="bookCategory">
                 <option disabled selected></option>
-                <option value="fantasy">Fantasy</option>
-                <option value="thriller">Thriller</option>
-                <option value="biography">Biography</option>
+                <option value="Fantasy">Fantasy</option>
+                <option value="Thriller">Thriller</option>
+                <option value="Biography">Biography</option>
             </select>
             <small>Error</small>
         </div>
-        <input type="submit" value="Submit">
     </form>
+    <div>
+        <button id="submit">Submit</button>
+    </div>
     <section id="library">
 
     </section>
 
     <script type="module" src="./scripts/main.js"></script>
 </body>
+
 </html>
