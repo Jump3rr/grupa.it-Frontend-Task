@@ -9,21 +9,22 @@
 </head>
 <body>
     <form id="mainForm">
-        <div class="formRow">
+        <div class="form-row">
             <label>Tytuł</label>
             <input type="text" id="bookTitle" placeholder="Tytuł">
             <small>Error</small>
         </div>
-        <div class="formRow">
+        <div class="form-row">
             <label>Autor</label>
             <input type="text" id="bookAuthor" placeholder="Autor">
             <small>Error</small>
         </div>
-        <div class="formRow">
+        <div class="form-row">
             <label>Priorytet przeczytania</label>
             <input type="number" id="bookPriority" min="1" max="5">
+            <small>Error</small>
         </div>
-        <div class="formRow">
+        <div class="form-row">
             <label>Kategoria</label>
             <select id="bookCategory">
                 <option disabled selected></option>
@@ -31,10 +32,14 @@
                 <option value="thriller">Thriller</option>
                 <option value="biography">Biography</option>
             </select>
+            <small>Error</small>
         </div>
         <input type="submit" value="Submit">
     </form>
+    <section id="library">
 
-    <script type="module" src="main.js"></script>
+    </section>
+
+    <script src="validation.js"></script>
 </body>
 </html>

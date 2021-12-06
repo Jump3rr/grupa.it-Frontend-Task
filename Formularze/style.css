@@ -1,13 +1,27 @@
 body {
     text-align: center;
 }
-.formRow {
-    width: 20vw;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-}
 #mainForm {
     margin-top: 10vh;
     display: inline-block;
+}
+.form-row {
+    width: 10vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 10px 0 10px 0;
+}
+.form-row small {
+    display: none;
+    color: #ff0000;
+}
+.form-row.success input {
+    border-color: #00ff00;
+}
+.form-row.error input {
+    border-color: #ff0000;
+}
+.form-row.error small {
+    display: block;
 }
