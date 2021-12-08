@@ -10,6 +10,7 @@
 </head>
 
 <body>
+    <h2>Dodaj nową książkę</h2>
     <form id="mainForm">
         <div class="form-row">
             <label>Tytuł</label>
@@ -38,11 +39,23 @@
         </div>
     </form>
     <div>
-        <button id="submit">Submit</button>
+        <button id="submit">Dodaj</button>
     </div>
-    <section id="library">
+    <h2>Biblioteka</h2>
+    <table id="libraryTable">
+        <thead>
+            <tr>
+                <th>Tytuł</th>
+                <th>Autor</th>
+                <th>Priorytet przeczytania</th>
+                <th>Kategoria</th>
+            </tr>
+        </thead>
+        <tbody id="libraryTableBody">
 
-    </section>
+        </tbody>
+    </table>
+
 
     <script type="module" src="./scripts/main.js"></script>
 </body>

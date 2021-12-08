@@ -1,17 +1,69 @@
 body {
-    text-align: center;
+	margin: 0;
+	height: 100vh;
+	text-align: center;
+	background: linear-gradient(45deg,#49a09d,#5f2c82) fixed;
+	font-family: sans-serif;
+	font-weight: 100;
+	color: #fff;
 }
+.container {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+}
+table {
+	margin: 5vh auto auto auto;
+	width: 80vw;
+	border-collapse: collapse;
+	overflow: hidden;
+	box-shadow: 0 0 20px rgba(0,0,0,0.1);
+}
+th, td {
+	width: 25%;
+	padding: 15px;
+	background-color: rgba(255,255,255,0.2);
+}
+thead th {
+	background-color: #55608f;
+}
+tbody tr:hover {
+	background-color: rgba(255,255,255,0.3);
+}
+tbody td {
+	position: relative;
+}
+tbody td:hover:before {
+	content: "";
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: -9999px;
+	bottom: -9999px;
+	background-color: rgba(255,255,255,0.2);
+	z-index: -1;
+}
+h2{
+	margin-top: 0;
+	padding-top: 3vh;
+}
+
 #mainForm {
-    margin-top: 10vh;
     display: inline-block;
 }
 .form-row {
-    width: 10vw;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     margin: 10px 0 10px 0;
 }
+@media only screen and (min-width: 800px) {
+    .form-row {
+		width: 300px;
+    }
+}
+
 .form-row small {
     display: none;
     color: #ff0000;
@@ -25,19 +77,26 @@ body {
 .form-row.error small {
     display: block;
 }
-#library {
-    margin-top: 5vh;
+
+button {
+    cursor: pointer;
+    outline: 0;
+    display: inline-block;
+    font-weight: 400;
+    line-height: 1.5;
+    text-align: center;
+    background-color: transparent;
+    border: 1px solid transparent;
+    padding: 6px 12px;
+    font-size: 1rem;
+    border-radius: .25rem;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    color: #fff;
+    border-color: #fff;
 }
-.book {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    width: 70vw;
-    margin: auto;
-}
-.longFields {
-    width: 30%;
-}
-.shortFields {
-    width: 10%;
+
+button:hover {
+    color: #000;
+    background-color: #fff;
+    border-color: #000;
 }
