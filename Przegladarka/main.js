@@ -6,26 +6,24 @@ const htmlNieparzyste = document.createElement('span');
 losBtn.addEventListener('click', GenerateColumns);
 
 function GenerateColumns() {
-    htmlParzyste.innerHTML = '';
-    htmlNieparzyste.innerHTML = '';
     let numbers = [];
+    htmlParzyste.innerHTML = 'Liczby parzyste:';
+    htmlNieparzyste.innerHTML = 'Liczby nieparzyste:';
 
-    for(let i=0; i<20; i++) 
+    for (let i = 0; i < 20; i++)
         numbers.push(Math.floor(Math.random() * 100) + 1);
 
-    numbers.sort((a,b) => {return a-b}).forEach(element => {
-        if(element % 2 === 0) {
-            const row = document.createElement('p');
-            row.innerHTML = element;
-            htmlParzyste.appendChild(row);
-        }
-        else {
-            const row = document.createElement('p');
-            row.innerHTML = element;
-            htmlNieparzyste.appendChild(row);
-        }
-    })
-    
+    numbers.sort((a, b) => { return a - b }).forEach(element => {
+        element % 2 === 0 ? AddToHTMLElement(htmlParzyste, element) : AddToHTMLElement(htmlNieparzyste, element);
+    });
+
     section.appendChild(htmlParzyste);
     section.appendChild(htmlNieparzyste);
+}
+
+function AddToHTMLElement(htmlElement, number) {
+    const row = document.createElement('p');
+    row.innerHTML = number;
+    htmlElement.appendChild(document.createElement('hr'));
+    htmlElement.appendChild(row);
 }
